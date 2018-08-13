@@ -44,7 +44,7 @@ variable "docker_version_server" {
   default = "17.03"
 }
 
-variable "docker_version_agent" {
+variable "docker_version_worker" {
   default = "17.03"
 }
 

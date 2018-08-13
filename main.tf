@@ -57,9 +57,9 @@ data "template_file" "userdata_agent" {
   template = "${file("files/userdata_agent")}"
 
   vars {
-    admin_password       = "${var.admin_password}"
-    cluster_name         = "${var.cluster_name}"
-    docker_version_agent = "${var.docker_version_agent}"
-    server_address       = "${hcloud_server.k8sserver.ipv4_address}"
+    admin_password        = "${var.admin_password}"
+    cluster_name          = "${var.cluster_name}"
+    docker_version_worker = "${var.docker_version_worker}"
+    server_address        = "${hcloud_server.k8sserver.ipv4_address}"
   }
 }
