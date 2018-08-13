@@ -50,7 +50,6 @@ data "template_file" "userdata_server" {
     admin_password        = "${var.admin_password}"
     cluster_name          = "${var.cluster_name}"
     docker_version_server = "${var.docker_version_server}"
-    rancher_version       = "${var.rancher_version}"
   }
 }
 
@@ -61,7 +60,6 @@ data "template_file" "userdata_agent" {
     admin_password       = "${var.admin_password}"
     cluster_name         = "${var.cluster_name}"
     docker_version_agent = "${var.docker_version_agent}"
-    rancher_version      = "${var.rancher_version}"
     server_address       = "${hcloud_server.k8sserver.ipv4_address}"
   }
 }
