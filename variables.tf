@@ -11,6 +11,13 @@ variable "prefix" {
   default = "test"
 }
 
+variable "k8sserver-image" {
+  default = "centos-7"
+}
+
+variable "k8sworker-image" {
+  default = "centos-7"
+}
 
 variable "count_k8s_all_nodes" {
   default = "3"
