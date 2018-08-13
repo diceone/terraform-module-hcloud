@@ -44,7 +44,7 @@ resource "hcloud_server" "k8s-worker" {
 }
 
 data "template_file" "userdata_server" {
-  template = "${file("files/userdata_server")}"
+  template = "${file("${path.module}/files/userdata_server")}"
 
   vars {
     admin_password        = "${var.admin_password}"
@@ -54,7 +54,7 @@ data "template_file" "userdata_server" {
 }
 
 data "template_file" "userdata_agent" {
-  template = "${file("files/userdata_agent")}"
+  template = "${file("${path.module}/files/userdata_agent")}"
 
   vars {
     admin_password        = "${var.admin_password}"
