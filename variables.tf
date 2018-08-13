@@ -8,7 +8,7 @@ variable "hcloud_token" {
 }
 
 variable "prefix" {
-  default = "yourname"
+  default = "test"
 }
 
 
