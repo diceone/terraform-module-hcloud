@@ -1,5 +1,11 @@
 #!/bin/bash -x
 
-if [ `command -v curl` ]; then
-  curl -sL https://releases.rancher.com/install-docker/${docker_version_worker}.sh | sh
-fi
+sysctl -w net.bridge.bridge-nf-call-iptables=1
+sysctl -p
+
+useradd -m k8suser -s /bin/bash
+usermod -aG docker k8suser
+
+mkdir -p /etc/docker/
+
+curl -sL https://releases.rancher.com/install-docker/${docker_version_worker}.sh | sh
