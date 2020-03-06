@@ -48,11 +48,11 @@ variable "server_type" {
 }
 
 variable "docker_version_server" {
-  default = "17.03"
+  default = "19.03"
 }
 
 variable "docker_version_worker" {
-  default = "17.03"
+  default = "19.03"
 }
 
 variable "ssh_keys" {
